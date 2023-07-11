@@ -1,0 +1,174 @@
+@charset "UTF-8";
+:root {
+  --brand-red: #ef4444;
+  --brand-orange: #f97316;
+  --brand-yellow: #eab308;
+  --brand-green: #22c55e;
+  --brand-blue: #3b82f6;
+  --brand-indigo: #6366f1;
+  --brand-violet: #8b5cf6;
+  --brand-dark: #334155;
+  --brand-light: #ffffff;
+  --brand-font: "Barlow Condensed", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300;400;500;600;700&display=swap");
+
+:root {
+  --dark: $c-black;
+  --light: $c-white;
+  --background: var($c-black);
+  --foreground: var($c-white);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+  background: var(--background);
+  font-family: var(--brand-font);
+  color: var(--foreground, #fff);
+}
+
+.logo {
+  background: transparent;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 20;
+  width: 160px;
+  height: auto;
+  pointer-events: none;
+}
+
+button, select {
+  position: absolute;
+  font-family: var(--brand-font);
+  box-sizing: border-box;
+  appearance: none;
+  border: none;
+  color: #fff;
+  color: var(--foreground, #fff);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+select {
+  position: relative;
+}
+
+.options {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+button {
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0;
+  outline: none;
+  padding: 0 0 0.5em 0.3em;
+}
+button span {
+  display: none;
+}
+button strong {
+  display: block;
+}
+button svg {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+button path {
+  fill: currentColor;
+}
+button .line {
+  display: none;
+}
+
+select {
+  font-size: 1.5rem;
+  appearance: none;
+  border-radius: 0;
+  color: var(--brand-blue);
+  padding: 0.25em 1.2em 0.25em 0.3em;
+  background-color: transparent;
+  background-size: auto 25%;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.7rem) 55%;
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%20%3C%21--%20Generator%3A%20IcoMoon.io%20--%3E%20%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%20%3Csvg%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20fill%3D%22%23000000%22%3E%3Cpath%20d%3D%22M%2096.00%2C96.00l-96.00%2C96.00l%20256.00%2C256.00l%20256.00-256.00l-96.00-96.00L%20256.00%2C256.00L%2096.00%2C96.00z%22%20%3E%3C/path%3E%3C/svg%3E");
+  transition: 150ms color;
+}
+select:focus {
+  outline: none;
+}
+select:hover {
+  color: var(--brand-green);
+}
+select > option {
+  font-size: 16px;
+}
+
+label {
+  display: inline-block;
+}
+.label {
+  font-size: 0.7em;
+  display: block;
+  padding: 0 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.currentColor {
+  pointer-events: none;
+  position: absolute;
+  left: 1.5rem;
+  top: 1rem;
+}
+.currentColor h2 {
+  margin: 0;
+}
+.currentColor span {
+  display: block;
+  margin-top: 0.1em;
+}
+.currentColor span::before {
+  position: relative;
+  top: -0.2em;
+  display: inline-block;
+  margin-right: 0.25em;
+  color: var(--color);
+  content: "⬤";
+  font-size: 0.9em;
+}
+
+.isDark button .line {
+  display: block;
+}
+.isDark select {
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%20%3C%21--%20Generator%3A%20IcoMoon.io%20--%3E%20%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%20%3Csvg%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20fill%3D%22%23ffffff%22%3E%3Cpath%20d%3D%22M%2096.00%2C96.00l-96.00%2C96.00l%20256.00%2C256.00l%20256.00-256.00l-96.00-96.00L%20256.00%2C256.00L%2096.00%2C96.00z%22%20%3E%3C/path%3E%3C/svg%3E");
+}
+.isDark .logo svg path.theme {
+  fill: #FFFFFF;
+}
+
+@media (max-width: 480px) {
+  button {
+    left: auto;
+    right: 1rem;
+    bottom: 7rem;
+  }
+  select, label {
+    width: 100%;
+  }
+}
